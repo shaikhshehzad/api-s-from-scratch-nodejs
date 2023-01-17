@@ -36,6 +36,10 @@ app.get("/dummy-image", (req, res) => {
   res.sendFile(`${publicPath}/dev-in-prog.png`);
 });
 
+app.get("/bootstrap.js", (req, res) => {
+  res.sendFile(`${publicPath}/bootstrap.js`);
+});
+
 app.get("*", (req, res) => {
   res.sendFile(`${publicPath}/Error.html`);
 });
