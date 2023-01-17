@@ -32,6 +32,10 @@ app.get("/dummy-json", (req, res) => {
   res.sendFile(`${publicPath}/dummy.json`);
 });
 
+app.get("/dummy-image", (req, res) => {
+  res.sendFile(`${publicPath}/dev-in-prog.png`);
+});
+
 app.get("*", (req, res) => {
   res.sendFile(`${publicPath}/Error.html`);
 });
