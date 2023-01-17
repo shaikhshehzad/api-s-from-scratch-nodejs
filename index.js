@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.send("From about");
 });
+
 app.get("/contactus", (req, res) => {
   res.send("From contactus");
 });
