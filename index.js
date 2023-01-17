@@ -28,6 +28,10 @@ app.get("/redirected", (req, res) => {
   res.send("From redirected page");
 });
 
+app.get("/dummy-json", (req, res) => {
+  res.sendFile(`${publicPath}/dummy.json`);
+});
+
 app.get("*", (req, res) => {
   res.sendFile(`${publicPath}/Error.html`);
 });
