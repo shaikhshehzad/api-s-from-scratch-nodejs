@@ -19,6 +19,11 @@ app.get('/contactus', (req, res) => {
     res.send('From contactus')
 })
 
+app.get('*', (req, res) => {
+      res.sendFile(`${publicPath}/Error.html`);
+})
+
+
 app.listen(PORT, () => {
   console.log(`Server app listening on port ${PORT}`)
 })
