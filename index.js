@@ -43,12 +43,12 @@ app.get("/bootstrap.js", (req, res) => {
 
 app.get("/redirection-loop1", (req, res) => {
   console.log("redirecting from 1 to 2");
-  res.redirect("/redirection-loop2");
+  // res.redirect("/redirection-loop2");
 });
 
 app.get("/redirection-loop2", (req, res) => {
   console.log("redirecting  from 2 to 1");
-  res.redirect("/redirection-loop1");
+  // res.redirect("/redirection-loop1");
 });
 
 
