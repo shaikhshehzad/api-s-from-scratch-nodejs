@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 7000;
 const path = require("path");
 const publicPath = path.join(__dirname, "public");
 const Mongoose = require("mongoose");
+const  mysql = require('mysql');
 
 app.get("/", (req, res) => {
   res.sendFile(`${publicPath}/HomePage.html`);
