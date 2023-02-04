@@ -48,6 +48,20 @@ app.get("*", (req, res) => {
 
 
 
+
+/********************* Handle The CORS *********************/
+
+app.use((request, response, next) => {
+  response.send("server up and running")
+  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+
+
+
 const URI = process.env.MONGODB_URL;
 Mongoose.set("strictQuery", false);
 Mongoose.connect(URI, {
