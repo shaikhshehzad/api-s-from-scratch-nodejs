@@ -40,6 +40,10 @@ app.get("/redirection-loop2", (req, res) => {
   console.log("redirecting  from 2 to 1");
   // res.redirect("/redirection-loop1");
 });
+app.get("/bt-grig", (req, res) => {
+  res.sendFile(`${publicPath}/bt-grid2.html`);
+  // res.redirect("/redirection-loop1");
+});
 app.get("*", (req, res) => {
   res.sendFile(`${publicPath}/Error.html`);
 });
